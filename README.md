@@ -1,6 +1,8 @@
 # Things
 ... to remember
 
+- How to make my own GitLab runner with IPv6 [link](./gitlab-runner.md) 
+
 ## Docs
 - [Mermaid](https://mermaid-js.github.io/mermaid/) - Graphs in markdown
 - https://stackedit.io - Markdown online editor
