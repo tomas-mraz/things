@@ -23,3 +23,11 @@
 ## Grafana
 
 - Prometheus exporter for Raspberry Pi https://github.com/lukasmalkmus/rpi_exporter
+
+## Red Hat firewall
+- firewall-cmd --zone=public --add-port=8484/tcp --permanent
+- firewall-cmd --reload
+- systemctl status firewalld
+
+## Login into Tanzu
+kubectl vsphere login --server=hostname.com --vsphere-username user.me@tanzu --tanzu-kubernetes-cluster-namespace iot-test --tanzu-kubernetes-cluster-name iot-test-tkc01 --insecure-skip-tls-verify
