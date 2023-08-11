@@ -1,5 +1,5 @@
 
-# IPv4 to IPv6 SSL reverse proxy with Nginx
+# IPv4 SSL to IPv6 no-SSL reverse proxy with Nginx
 
 When you have HTTP services running on IPv6 addresses, and you want make it accessible from IPv4 space.
 Schema is like this:  
