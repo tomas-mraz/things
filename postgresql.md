@@ -9,7 +9,9 @@ CREATE USER myuser WITH ENCRYPTED PASSWORD 'mypass';
 GRANT ALL privileges on DATABASE mydb TO myuser;
 ```
 
-switch to database `\CONNECT mydb`
+switch to database `\c mydb;`
+
+print database I'm currently using `SELECT current_database();`
 
 granting SELECT right
 `GRANT ALL ON ALL TABLES IN SCHEMA schema_name TO myuser;`
