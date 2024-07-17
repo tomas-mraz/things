@@ -18,11 +18,11 @@ network:
           - 192.168.10.1
           - 8.8.8.8
           - 8.8.4.4
-          - 2001:4860:4860::8888
-          - 2001:4860:4860::8844
+#          - 2001:4860:4860::8888 // included in RA
+#          - 2001:4860:4860::8844 // included in RA
       routes:
         - to: default
           via: 192.168.10.1
-          on-link: true
+#         on-link: true // included in RA
   version: 2
 ```
