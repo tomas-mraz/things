@@ -1,5 +1,5 @@
 
-# Linux
+# Linux (Ubuntu)
 
 following logs for specific service  
 `journalctl -u service_name -f`
@@ -13,3 +13,5 @@ in case ifconfig is not found
 install agent to KVM VM `apt install qemu-guest-agent`
 
 reload systemd `systemctl daemon-reload`
+
+set timezone `dpkg-reconfigure tzdata`
