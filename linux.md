@@ -18,6 +18,10 @@ reload systemd `systemctl daemon-reload`
 
 set timezone `dpkg-reconfigure tzdata`
 
+set global variables per user
+source: https://askubuntu.com/questions/4667/where-to-declare-environment-variables
+add file with variables `touch ~/.pam_environment`
+
 ## How to add application icon to system
 
 Source: https://askubuntu.com/questions/1428517/how-do-i-create-a-new-application-launcher-in-ubuntu-22-04
