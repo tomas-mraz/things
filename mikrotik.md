@@ -25,8 +25,35 @@ Login and ask about tunnel. Insert public IPv4 address and IPv6 settings will be
 ## Switch WAN port to ether2 (from default ether1)
 
 I case you want to use POE with your LAN switch, you need to change WAN to port2 and make from port1(support POE) normal LAN port. 
-Then you can connect LAN switch with port1(PoE) and ISP cabel(source of internet) to port2(now WAN port).
+Then you can connect LAN switch with port1(PoE) and ISP cable (source of internet) to port2 (now WAN port).
 
 Tricky part is go to Bridge config and change port2 to port1. Then port2 is not "secondary" and can be used for DHCP client.
 
 Source: https://forum.mikrotik.com/viewtopic.php?t=162832
+
+## Hex PoE warm up
+Common:
+- disable packages "wireless", "ppp" and "hotspot" in /system/package
+- enable package "ipv6" in /system/package
+- disable spf1 in /interfaces/interface
+- disable ftp,ssh,telnet in /ip/services
+- in /system/clock set time-zone-name=Europe/Prague
+- in /system/sntp client set enabled=yes primary-ntp=195.113.144.201 secondary-ntp=147.32.127.250
+- in /tools/graphing/interface-rules add interface=ether2 store-on-disk=yes
+- in /tools/graphing/resource-rules add rule store-on-disk=yes
+- in /ip/dns set servers: 1.1.1.1, 8.8.8.8
+
+Specific to switch eth1 with eth2
+- change interface ether2 to ether1 in /bridge/ports
+- change WAN from ether1 to ether2 in /interfaces/interface-list
+- change interface ether1 to ether2 in /ip/dhcp-client
+- in /ip/dhcp-client set enable=yes interface=ether2
+- in /ipv6/dhcp-client set request=prefix interface=ether2 pool-name=pool6 pool-prefix-length=48 use-peer-dns=no rapid-commit=no add-default-route=yes
+
+???
+- in /ip/neighbor-discovery set discover-interface-list=LAN
+
+- upload file config_firewall_ipv4.rsc
+- upload file config_firewall_ipv6.rsc
+- terminal /import file-name=config_firewall_ipv4.rsc
+- terminal /import file-name=config_firewall_ipv6.rsc

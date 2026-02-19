@@ -1,6 +1,7 @@
 # Things
 ... to remember
 
+- Home Assistant [CLI commands](./home_assistant.md)
 - K9s is a Kubernetes tool which is the must have [K9s homepage](https://k9scli.io)
 - How to make my own GitLab runner with IPv6 [[page](./gitlab-runner.md)]
 - Create 6to4 tunnel on Mikrotik router [[page](mikrotik.md#how-to-create-ipv6-tunnel)]
@@ -10,6 +11,7 @@
 - Signing commits - "Verified" label on GitHub [[page](./signing_commits.md)]
 
 ## Docs
+- EEE ak. "Embrace, extend, and extinguish" - [Wikipedia](https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish)
 - [Mermaid](https://mermaid-js.github.io/mermaid/) - Graphs in markdown
 - https://stackedit.io - Markdown online editor
 - https://github.com/asciidoctor/asciidoctor
@@ -29,6 +31,3 @@
 - firewall-cmd --zone=public --add-port=8484/tcp --permanent
 - firewall-cmd --reload
 - systemctl status firewalld
-
-## Login into Tanzu
-kubectl vsphere login --server=hostname.com --vsphere-username user.me@tanzu --tanzu-kubernetes-cluster-namespace iot-test --tanzu-kubernetes-cluster-name iot-test-tkc01 --insecure-skip-tls-verify
