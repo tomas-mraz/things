@@ -3,11 +3,11 @@
 
 ## Upgrade LTS
 
-`sudo apt update && sudo apt full-upgrade -y` - upgrade actuall version
-`sudo apt autoremove --purge -y && sudo reboot` - clean packages and reboot
-`grep "^Prompt=" /etc/update-manager/release-upgrades` - check distribution channel
-`sudo apt install update-manager-core -y` - install manager
-`sudo do-release-upgrade` - move to new version
+`sudo apt update && sudo apt full-upgrade -y` - upgrade actuall version  
+`sudo apt autoremove --purge -y && sudo reboot` - clean packages and reboot  
+`grep "^Prompt=" /etc/update-manager/release-upgrades` - check distribution channel  
+`sudo apt install update-manager-core -y` - install manager  
+`sudo do-release-upgrade` - move to new version  
 `lsb_release -a` - check version
 
 ## System tweaks
