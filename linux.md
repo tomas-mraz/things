@@ -3,6 +3,8 @@
 
 ## Upgrade LTS
 
+for minification systems: `sudo apt update && sudo apt install -y ubuntu-release-upgrader-core screen lsb-release curl`
+
 `sudo apt update && sudo apt full-upgrade -y` - upgrade actuall version  
 `sudo apt autoremove --purge -y && sudo reboot` - clean packages and reboot  
 `grep "^Prompt=" /etc/update-manager/release-upgrades` - check distribution channel  
